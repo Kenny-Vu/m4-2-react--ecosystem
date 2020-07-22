@@ -38,9 +38,6 @@ const Header = (props) => {
         <Link to="/about">
           <li>About</li>
         </Link>
-        <Link to="/items">
-          <li>Items</li>
-        </Link>
       </ul>
     </NavBar>
   );

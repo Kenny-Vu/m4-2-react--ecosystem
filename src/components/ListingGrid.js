@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const FruitList = styled.div`
    {
@@ -28,7 +29,9 @@ export const ListingGrid = ({ itemList }) => {
     return (
       <div key={item.id}>
         <img src={item.imageSrc} alt={item.name}></img>
-        <div className="fruit-name">{item.name}</div>
+        <div className="fruit-name">
+          <Link to={`/items/${item.name}`}>{item.name}</Link>{" "}
+        </div>
         <div>{item.latinName}</div>
       </div>
     );

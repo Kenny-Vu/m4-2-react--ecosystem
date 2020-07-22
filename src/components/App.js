@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import About from "./About";
 import Home from "./Home";
+import ItemDetails from "./ItemDetails";
 
 const App = (props) => {
   return (
@@ -15,6 +16,9 @@ const App = (props) => {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/items/:itemId">
+          <ItemDetails />
         </Route>
       </Switch>
     </Router>
