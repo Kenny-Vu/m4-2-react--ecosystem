@@ -11,6 +11,9 @@ const FruitInfo = styled.div`
     align-items: center;
     margin-top: 2rem;
   }
+  div {
+    text-align: center;
+  }
   .fruit-names {
     text-align: center;
     font-size: 1.5rem;
@@ -59,7 +62,7 @@ const ItemDetails = () => {
   const sellersData = Object.values(sellers);
   const sellerInfo = sellersData.find((seller) => seller.id === sellerId);
   const buttonText =
-    quantity > 0 ? <button>{`${price}$ - Buy Now`}</button> : "Out of stock";
+    quantity > 0 ? <button>{`${price}$ - Buy Now`}</button> : "Out of stock :(";
   return (
     <FruitInfo>
       <img className="fruit-pic" src={imageSrc} alt={name}></img>
